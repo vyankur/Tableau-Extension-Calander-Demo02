@@ -1,0 +1,161 @@
+.config-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.config-dialog {
+  width: min(980px, 100%);
+  max-height: min(860px, calc(100vh - 48px));
+  overflow: auto;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.28);
+  color: #0f172a;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.config-header,
+.config-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.config-header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.config-header h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.config-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.icon-button {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.config-grid fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.config-grid fieldset.wide {
+  grid-column: 1 / -1;
+}
+
+.config-grid legend {
+  padding: 0 6px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.config-grid label {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.config-grid input,
+.config-grid select,
+.config-grid textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.config-grid input,
+.config-grid select {
+  height: 34px;
+  padding: 0 10px;
+}
+
+.config-grid textarea {
+  padding: 10px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  resize: vertical;
+}
+
+.color-label span {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.color-label input[type="color"] {
+  padding: 2px;
+}
+
+.config-actions {
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.config-actions button {
+  min-width: 108px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.config-actions .secondary {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.config-actions .primary {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+  }
+}

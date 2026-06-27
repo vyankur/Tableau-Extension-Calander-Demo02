@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <worksheet-extension id="com.tableaudemo.extension01.calendarheatmap.viz" extension-version="1.0.0">
+    <default-locale>en_US</default-locale>
+    <name resource-id="name"/>
+    <description>Worksheet-level full year calendar heatmap viz extension.</description>
+    <author name="Extension01" email="admin@example.com" organization="Tableau Demo" website="https://localhost"/>
+    <min-api-version>1.12</min-api-version>
+    <source-location>
+      <url>http://localhost:5173/?extensionType=viz</url>
+    </source-location>
+    <icon/>
+    <encoding id="date">
+      <display-name>Date</display-name>
+      <data-spec>
+        <data-type>temporal</data-type>
+      </data-spec>
+      <role-spec>
+        <role-type>continuous-dimension</role-type>
+        <role-type>discrete-dimension</role-type>
+      </role-spec>
+      <fields max-count="1"/>
+      <encoding-icon token="grid"/>
+      <tooltip>Drag the day-level date for the calendar.</tooltip>
+    </encoding>
+    <encoding id="value">
+      <display-name>Value</display-name>
+      <data-spec>
+        <data-type>numeric</data-type>
+      </data-spec>
+      <role-spec>
+        <role-type>continuous-measure</role-type>
+        <role-type>discrete-measure</role-type>
+      </role-spec>
+      <fields max-count="1"/>
+      <encoding-icon token="color"/>
+      <tooltip>Drag the measure used for heatmap color.</tooltip>
+    </encoding>
+    <encoding id="attribute">
+      <display-name>Attribute</display-name>
+      <data-spec>
+        <data-type>string</data-type>
+      </data-spec>
+      <role-spec>
+        <role-type>discrete-dimension</role-type>
+      </role-spec>
+      <fields max-count="4"/>
+      <encoding-icon token="filter"/>
+      <tooltip>Optional attributes for control-panel filters.</tooltip>
+    </encoding>
+  </worksheet-extension>
+  <resources>
+    <resource id="name">
+      <text locale="en_US">Extension01 Calendar Heatmap</text>
+    </resource>
+  </resources>
+</manifest>
