@@ -4,8 +4,16 @@ Extension01 is a production-ready Tableau Dashboard Extension built with React, 
 
 The project now includes two manifests:
 
-- `manifest.trex` for dashboard use as a dashboard object.
-- `manifest-viz.trex` for worksheet use as a Tableau Viz Extension from the Marks card.
+- `manifest.trex` for dashboard use on Tableau Server / Tableau Cloud.
+- `manifest-viz.trex` for worksheet use as a Tableau Viz Extension on Tableau Server / Tableau Cloud.
+- `manifest-local-dashboard.trex` for localhost dashboard development.
+- `manifest-local-viz.trex` for localhost worksheet/Viz Extension development.
+
+The server manifests point to:
+
+```text
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+```
 
 ## Features
 
@@ -80,6 +88,42 @@ dist/
 ```
 
 Host the contents of `dist/` on HTTPS for Tableau Server and Tableau Cloud. Then update `manifest.trex`:
+The Vite build uses relative asset paths, so the built app can be hosted under a subfolder such as `/Tableau-Extension-Calander-Demo02/dist/`.
+
+## Tableau Developer Server Deployment
+
+1. Build the app:
+
+```bash
+npm run build
+```
+
+2. Publish the complete `dist/` folder to:
+
+```text
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+```
+
+3. Use these manifests in Tableau:
+
+```text
+manifest.trex
+manifest-viz.trex
+```
+
+4. In Tableau Server / Tableau Cloud, allow-list the extension URL if your administrator has extension security controls enabled:
+
+```text
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+```
+
+5. For worksheet use, add it from the Marks card as a Viz Extension and select `manifest-viz.trex`.
+
+6. For dashboard use, add an Extension dashboard object and select `manifest.trex`.
+
+If your developer server URL changes, update the `<source-location><url>...</url></source-location>` value in both `manifest.trex` and `manifest-viz.trex`.
+
+For local testing use `manifest-local-dashboard.trex` or `manifest-local-viz.trex`.
 
 ```xml
 <source-location>

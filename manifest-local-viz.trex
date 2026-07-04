@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
-  <worksheet-extension id="com.tableaudemo.extension01.calendarheatmap.viz" extension-version="1.0.0">
+  <worksheet-extension id="com.tableaudemo.extension01.calendarheatmap.viz.local" extension-version="1.0.0">
     <default-locale>en_US</default-locale>
     <name resource-id="name"/>
-    <description>Worksheet-level full year calendar heatmap viz extension.</description>
-    <author name="Extension01" email="admin@example.com" organization="Tableau Demo" website="https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/"/>
+    <description>Local development worksheet-level calendar heatmap viz extension.</description>
+    <author name="Extension01" email="admin@example.com" organization="Tableau Demo" website="https://localhost"/>
     <min-api-version>1.12</min-api-version>
     <source-location>
-      <url>https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/?extensionType=viz</url>
+      <url>http://localhost:5173/?extensionType=viz</url>
     </source-location>
     <icon/>
     <encoding id="date">
@@ -51,7 +51,7 @@
   </worksheet-extension>
   <resources>
     <resource id="name">
-      <text locale="en_US">Extension01 Calendar Heatmap</text>
+      <text locale="en_US">Extension01 Calendar Heatmap Local</text>
     </resource>
   </resources>
 </manifest>
