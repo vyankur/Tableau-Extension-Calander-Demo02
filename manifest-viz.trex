@@ -4,10 +4,10 @@
     <default-locale>en_US</default-locale>
     <name resource-id="name"/>
     <description>Worksheet-level full year calendar heatmap viz extension.</description>
-    <author name="Extension01" email="admin@example.com" organization="Tableau Demo" website="https://vyankur.github.io/Tableau-Extension-Calander-Demo02/"/>
+    <author name="Extension01" email="admin@example.com" organization="Tableau Demo" website="https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/"/>
     <min-api-version>1.12</min-api-version>
     <source-location>
-      <url>https://vyankur.github.io/Tableau-Extension-Calander-Demo02/?extensionType=viz</url>
+      <url>https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/?extensionType=viz</url>
     </source-location>
     <icon/>
     <encoding id="date">
