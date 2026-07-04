@@ -12,7 +12,7 @@ The project now includes two manifests:
 The server manifests point to:
 
 ```text
-https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/
 ```
 
 ## Features
@@ -98,10 +98,10 @@ The Vite build uses relative asset paths, so the built app can be hosted under a
 npm run build
 ```
 
-2. Publish the complete `dist/` folder to:
+2. Push to `main`. The included GitHub Actions workflow builds the app and publishes `dist/` as the GitHub Pages site root:
 
 ```text
-https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/
 ```
 
 3. Use these manifests in Tableau:
@@ -114,7 +114,7 @@ manifest-viz.trex
 4. In Tableau Server / Tableau Cloud, allow-list the extension URL if your administrator has extension security controls enabled:
 
 ```text
-https://vyankur.github.io/Tableau-Extension-Calander-Demo02/dist/
+https://vyankur.github.io/Tableau-Extension-Calander-Demo02/
 ```
 
 5. For worksheet use, add it from the Marks card as a Viz Extension and select `manifest-viz.trex`.
