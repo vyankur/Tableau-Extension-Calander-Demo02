@@ -1,4 +1,4 @@
-## View Dashboard Extension Demo.mp4 for demo
+## Watch Dashboard Extension Demo.mp4 for demo
 # Extension01
 
 Extension01 is a production-ready Tableau Dashboard Extension built with React, TypeScript, Vite, and the Tableau Extensions API. It renders a responsive full-year circular calendar heatmap inspired by Andy Kriebel-style calendar dashboards.
