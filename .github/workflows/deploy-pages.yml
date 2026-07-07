@@ -34,13 +34,32 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare Pages artifact
+        shell: bash
+        run: |
+          mkdir -p pages-artifact
+          cp -R dist pages-artifact/dist
+          cat > pages-artifact/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <meta http-equiv="refresh" content="0; url=./dist/" />
+              <title>Extension01 Calendar Heatmap</title>
+            </head>
+            <body>
+              <a href="./dist/">Open Extension01 Calendar Heatmap</a>
+            </body>
+          </html>
+          HTML
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: pages-artifact
 
   deploy:
     environment:
